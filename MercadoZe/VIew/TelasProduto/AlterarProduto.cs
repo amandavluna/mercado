@@ -28,7 +28,7 @@ namespace MercadoZe.VIew.TelasProduto
         {
             Produto.Id_Produto = Convert.ToInt32(tbx_MatriculaProduto.Text);
             manipulaProduto manipulaProduto1 = new manipulaProduto();
-            manipulaProduto.VisualizarID();
+            manipulaProduto.VisualizarID1();
 
             tbx_Nome.Text = Produto.NomeProduto1;
             tbx_Valor.Text = Produto.ValorProduto1.ToString();
@@ -81,7 +81,7 @@ namespace MercadoZe.VIew.TelasProduto
         {
             Produto.Id_Produto = Convert.ToInt32(tbx_MatriculaProduto.Text);
             manipulaProduto manipulaProduto = new manipulaProduto();
-            manipulaProduto.BuscarIDProduto();
+            manipulaProduto.BuscarProduto();
 
             tbx_Nome.Text = Produto.NomeProduto1;
             tbx_Valor.Text = Produto.ValorProduto1.ToString();

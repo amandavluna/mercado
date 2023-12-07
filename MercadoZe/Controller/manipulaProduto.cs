@@ -13,29 +13,6 @@ namespace MercadoZe.Controller
     internal class manipulaProduto
     {
 
-        public static BindingSource VisualizarID() {
-
-            SqlConnection cn = new SqlConnection(ConexaoBanco.Conectar());
-            SqlCommand cmd = new SqlCommand("P_BuscarProduto", cn);
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-            cmd.Parameters.AddWithValue("@Id_Produto", Produto.Id_Produto);
-            cn.Open();
-            cmd.ExecuteNonQuery();
-
-
-            SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
-
-
-            DataTable table = new DataTable();
-
-            sqlData.Fill(table);
-
-            BindingSource dados = new BindingSource();
-            dados.DataSource = table;
-            return dados;
-
-        }
         public static BindingSource VisualizarID1()
         {
 
@@ -60,6 +37,7 @@ namespace MercadoZe.Controller
             return dados;
 
         }
+
         public void CadastroProduto()
         {
             SqlConnection cn = new SqlConnection(ConexaoBanco.Conectar());
@@ -129,43 +107,47 @@ namespace MercadoZe.Controller
             finally { cn.Close(); }
         }
 
-        public void BuscarIDProduto() {
+        public void BuscarProduto()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBanco.Conectar());
+            SqlCommand cmd = new SqlCommand("P_BuscarProduto", cn);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                SqlConnection cn = new SqlConnection(ConexaoBanco.Conectar());
-                SqlCommand cmd = new SqlCommand("P_BuscarProduto", cn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            try
+            {
+                SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@Id_Produto", Produto.Id_Produto);
+                cn.Open();
+                var dr = cmd.ExecuteReader();
 
-                try
+                if (dr.Read())
                 {
-                    SqlParameter sqlParameter = cmd.Parameters.AddWithValue("@Id_Produto", Produto.Id_Produto);
-                    cn.Open();
-                    var dr = cmd.ExecuteReader();
-
-                    if (dr.Read())
-                    {
-                        Produto.Id_Produto = Convert.ToInt32(dr["Id_Produto"]);
-                        Produto.NomeProduto1 = dr["NomeProduto"].ToString();
-                        Produto.ValorProduto1 = (decimal) dr["ValorProduto"];
-                        Produto.MarcaProduto1 = dr["MarcaProduto"].ToString();
-                    }
-                    else
-                    {
-                        Produto.Id_Produto = 0;
-                        Produto.NomeProduto1 = "";
-                        Produto.ValorProduto1 = 0;
-                        Produto.MarcaProduto1 = "";
-
-                        MessageBox.Show("Busca Não Executada..");
-                    }
+                    Produto.Id_Produto = Convert.ToInt32(dr["Id_Produto"]);
+                    Produto.NomeProduto1 = dr["NomeProduto"].ToString();
+                    Produto.MarcaProduto1 = dr["MarcaProduto"].ToString();
+                    Produto.ValorProduto1 = Convert.ToInt32(dr["ValorProduto"]);
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    Produto.Id_Produto = 0;
+                    Produto.NomeProduto1 = "";
+                    Produto.MarcaProduto1 = "";
+                    Produto.ValorProduto1 = 0;
+
+                    MessageBox.Show("Busca Não Executada..");
                 }
 
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
 
+
     }
 }
+

@@ -23,7 +23,7 @@ namespace MercadoZe.VIew.TelasProduto
         {
             Produto.Id_Produto = Convert.ToInt32(tbx_Matricula.Text);
             manipulaProduto manipulaProduto = new manipulaProduto();
-            manipulaProduto.BuscarIDProduto();
+            manipulaProduto.BuscarProduto();
 
             tbx_Marca.Text = Produto.MarcaProduto1;
             tbx_Nome.Text = Produto.NomeProduto1;
@@ -35,7 +35,7 @@ namespace MercadoZe.VIew.TelasProduto
         private void button1_Click(object sender, EventArgs e)
         {
             Produto.NomeProduto1 = tbx_Pesquisa.Text;
-            dataGridViewUsuarios.DataSource = manipulaFuncionario.VisualizarNome();
+            dataGridViewUsuarios.DataSource = manipulaProduto.VisualizarID1();
             dataGridViewUsuarios.Columns[0].Visible = false;
             dataGridViewUsuarios.Columns[1].Visible = false;
             dataGridViewUsuarios.Columns[2].Visible = false;

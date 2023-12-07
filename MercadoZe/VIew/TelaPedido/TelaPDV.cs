@@ -64,7 +64,7 @@ namespace MercadoZe.VIew.TelaPedido
             lbl_Qtde.Text = tbx_Qtde.Text;
             Produto.Id_Produto = Convert.ToInt32(tbx_CodigoBarra.Text);
             manipulaProduto produto = new manipulaProduto();
-            produto.BuscarIDProduto();
+            produto.BuscarProduto();
 
 
             lbl_Produto.Text = Produto.NomeProduto1;

@@ -33,7 +33,7 @@ namespace MercadoZe.VIew.TelasProduto
         {
             Produto.Id_Produto = Convert.ToInt32(tbx_Matricula.Text);
             manipulaProduto manipulaProduto = new manipulaProduto();
-            manipulaProduto.BuscarIDProduto();
+            manipulaProduto.BuscarProduto();
 
             tbx_Marca.Text = Produto.MarcaProduto1;
             tbx_Nome.Text = Produto.NomeProduto1;
