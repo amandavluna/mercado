@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
+            tbx_SenhaAlterar = new TextBox();
             label6 = new Label();
-            comboBox1 = new ComboBox();
+            cbx_TipoAlterar = new ComboBox();
             label4 = new Label();
             label5 = new Label();
-            tbx_CodigoCliente = new TextBox();
+            tbx_EmailAlterar = new TextBox();
             label3 = new Label();
-            tbx_CodigoFuncionario = new TextBox();
-            btn_CadastrarUsuario = new Button();
-            button1 = new Button();
-            tbx_TipoUsuario = new TextBox();
+            tbx_nomeAlterar = new TextBox();
+            btn_AlterarUsuario = new Button();
+            btn_BuscarAlterar = new Button();
+            tbx_MatriculaAlterar = new TextBox();
             label2 = new Label();
             label1 = new Label();
             groupBox1.SuspendLayout();
@@ -47,15 +47,15 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(tbx_SenhaAlterar);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(cbx_TipoAlterar);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(tbx_CodigoCliente);
+            groupBox1.Controls.Add(tbx_EmailAlterar);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(tbx_CodigoFuncionario);
-            groupBox1.Controls.Add(btn_CadastrarUsuario);
+            groupBox1.Controls.Add(tbx_nomeAlterar);
+            groupBox1.Controls.Add(btn_AlterarUsuario);
             groupBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.Location = new Point(38, 217);
             groupBox1.Name = "groupBox1";
@@ -64,12 +64,12 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "INFORMAÇÕES";
             // 
-            // textBox1
+            // tbx_SenhaAlterar
             // 
-            textBox1.Location = new Point(280, 189);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(110, 25);
-            textBox1.TabIndex = 11;
+            tbx_SenhaAlterar.Location = new Point(280, 189);
+            tbx_SenhaAlterar.Name = "tbx_SenhaAlterar";
+            tbx_SenhaAlterar.Size = new Size(110, 25);
+            tbx_SenhaAlterar.TabIndex = 11;
             // 
             // label6
             // 
@@ -81,13 +81,14 @@
             label6.TabIndex = 10;
             label6.Text = "SENHA";
             // 
-            // comboBox1
+            // cbx_TipoAlterar
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(101, 189);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 25);
-            comboBox1.TabIndex = 9;
+            cbx_TipoAlterar.FormattingEnabled = true;
+            cbx_TipoAlterar.Items.AddRange(new object[] { "Gerente", "Atendente", "Caixa" });
+            cbx_TipoAlterar.Location = new Point(101, 189);
+            cbx_TipoAlterar.Name = "cbx_TipoAlterar";
+            cbx_TipoAlterar.Size = new Size(121, 25);
+            cbx_TipoAlterar.TabIndex = 9;
             // 
             // label4
             // 
@@ -109,12 +110,12 @@
             label5.TabIndex = 4;
             label5.Text = "EMAIL:";
             // 
-            // tbx_CodigoCliente
+            // tbx_EmailAlterar
             // 
-            tbx_CodigoCliente.Location = new Point(156, 98);
-            tbx_CodigoCliente.Name = "tbx_CodigoCliente";
-            tbx_CodigoCliente.Size = new Size(202, 25);
-            tbx_CodigoCliente.TabIndex = 7;
+            tbx_EmailAlterar.Location = new Point(156, 98);
+            tbx_EmailAlterar.Name = "tbx_EmailAlterar";
+            tbx_EmailAlterar.Size = new Size(202, 25);
+            tbx_EmailAlterar.TabIndex = 7;
             // 
             // label3
             // 
@@ -126,41 +127,42 @@
             label3.TabIndex = 2;
             label3.Text = "TIPO";
             // 
-            // tbx_CodigoFuncionario
+            // tbx_nomeAlterar
             // 
-            tbx_CodigoFuncionario.Location = new Point(156, 48);
-            tbx_CodigoFuncionario.Name = "tbx_CodigoFuncionario";
-            tbx_CodigoFuncionario.Size = new Size(202, 25);
-            tbx_CodigoFuncionario.TabIndex = 8;
+            tbx_nomeAlterar.Location = new Point(156, 48);
+            tbx_nomeAlterar.Name = "tbx_nomeAlterar";
+            tbx_nomeAlterar.Size = new Size(202, 25);
+            tbx_nomeAlterar.TabIndex = 8;
             // 
-            // btn_CadastrarUsuario
+            // btn_AlterarUsuario
             // 
-            btn_CadastrarUsuario.BackColor = SystemColors.MenuBar;
-            btn_CadastrarUsuario.Location = new Point(382, 239);
-            btn_CadastrarUsuario.Name = "btn_CadastrarUsuario";
-            btn_CadastrarUsuario.Size = new Size(100, 34);
-            btn_CadastrarUsuario.TabIndex = 5;
-            btn_CadastrarUsuario.Text = "CADASTRAR";
-            btn_CadastrarUsuario.UseVisualStyleBackColor = false;
-            btn_CadastrarUsuario.Click += btn_CadastrarUsuario_Click;
+            btn_AlterarUsuario.BackColor = SystemColors.MenuBar;
+            btn_AlterarUsuario.Location = new Point(382, 239);
+            btn_AlterarUsuario.Name = "btn_AlterarUsuario";
+            btn_AlterarUsuario.Size = new Size(100, 34);
+            btn_AlterarUsuario.TabIndex = 5;
+            btn_AlterarUsuario.Text = "ALTERAR";
+            btn_AlterarUsuario.UseVisualStyleBackColor = false;
+            btn_AlterarUsuario.Click += btn_CadastrarUsuario_Click;
             // 
-            // button1
+            // btn_BuscarAlterar
             // 
-            button1.BackColor = SystemColors.MenuBar;
-            button1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(420, 144);
-            button1.Name = "button1";
-            button1.Size = new Size(96, 32);
-            button1.TabIndex = 18;
-            button1.Text = "BUSCAR";
-            button1.UseVisualStyleBackColor = false;
+            btn_BuscarAlterar.BackColor = SystemColors.MenuBar;
+            btn_BuscarAlterar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_BuscarAlterar.Location = new Point(420, 144);
+            btn_BuscarAlterar.Name = "btn_BuscarAlterar";
+            btn_BuscarAlterar.Size = new Size(96, 32);
+            btn_BuscarAlterar.TabIndex = 18;
+            btn_BuscarAlterar.Text = "BUSCAR";
+            btn_BuscarAlterar.UseVisualStyleBackColor = false;
+            btn_BuscarAlterar.Click += button1_Click;
             // 
-            // tbx_TipoUsuario
+            // tbx_MatriculaAlterar
             // 
-            tbx_TipoUsuario.Location = new Point(59, 153);
-            tbx_TipoUsuario.Name = "tbx_TipoUsuario";
-            tbx_TipoUsuario.Size = new Size(188, 23);
-            tbx_TipoUsuario.TabIndex = 17;
+            tbx_MatriculaAlterar.Location = new Point(59, 153);
+            tbx_MatriculaAlterar.Name = "tbx_MatriculaAlterar";
+            tbx_MatriculaAlterar.Size = new Size(188, 23);
+            tbx_MatriculaAlterar.TabIndex = 17;
             // 
             // label2
             // 
@@ -170,7 +172,7 @@
             label2.Name = "label2";
             label2.Size = new Size(90, 20);
             label2.TabIndex = 16;
-            label2.Text = "MATRICULA";
+            label2.Text = "MATRÍCULA";
             // 
             // label1
             // 
@@ -189,8 +191,8 @@
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(581, 530);
             Controls.Add(label1);
-            Controls.Add(button1);
-            Controls.Add(tbx_TipoUsuario);
+            Controls.Add(btn_BuscarAlterar);
+            Controls.Add(tbx_MatriculaAlterar);
             Controls.Add(label2);
             Controls.Add(groupBox1);
             Name = "AlterarUsuario";
@@ -204,17 +206,17 @@
         #endregion
 
         private GroupBox groupBox1;
-        private TextBox textBox1;
+        private TextBox tbx_SenhaAlterar;
         private Label label6;
-        private ComboBox comboBox1;
+        private ComboBox cbx_TipoAlterar;
         private Label label4;
         private Label label5;
-        private TextBox tbx_CodigoCliente;
+        private TextBox tbx_EmailAlterar;
         private Label label3;
-        private TextBox tbx_CodigoFuncionario;
-        private Button btn_CadastrarUsuario;
-        private Button button1;
-        private TextBox tbx_TipoUsuario;
+        private TextBox tbx_nomeAlterar;
+        private Button btn_AlterarUsuario;
+        private Button btn_BuscarAlterar;
+        private TextBox tbx_MatriculaAlterar;
         private Label label2;
         private Label label1;
     }

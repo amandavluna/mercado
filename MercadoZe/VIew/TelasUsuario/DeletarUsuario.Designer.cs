@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
+            tbx_NumeroUsuario = new TextBox();
             label6 = new Label();
-            comboBox1 = new ComboBox();
+            cdx_TipoUsuario = new ComboBox();
             label4 = new Label();
             label5 = new Label();
-            tbx_CodigoCliente = new TextBox();
+            tbx_EmailUsuario = new TextBox();
             label3 = new Label();
-            tbx_CodigoFuncionario = new TextBox();
-            btn_CadastrarUsuario = new Button();
-            button1 = new Button();
-            tbx_TipoUsuario = new TextBox();
+            tbx_NomeUsuario = new TextBox();
+            btn_ExcluirUsuario = new Button();
+            btn_BuscarUsuario = new Button();
+            tbx_MatriculaUsuario = new TextBox();
             label2 = new Label();
             label1 = new Label();
             groupBox1.SuspendLayout();
@@ -47,15 +47,15 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(tbx_NumeroUsuario);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(cdx_TipoUsuario);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(tbx_CodigoCliente);
+            groupBox1.Controls.Add(tbx_EmailUsuario);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(tbx_CodigoFuncionario);
-            groupBox1.Controls.Add(btn_CadastrarUsuario);
+            groupBox1.Controls.Add(tbx_NomeUsuario);
+            groupBox1.Controls.Add(btn_ExcluirUsuario);
             groupBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.Location = new Point(32, 168);
             groupBox1.Name = "groupBox1";
@@ -64,30 +64,30 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "INFORMAÇÕES";
             // 
-            // textBox1
+            // tbx_NumeroUsuario
             // 
-            textBox1.Location = new Point(286, 166);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 25);
-            textBox1.TabIndex = 11;
+            tbx_NumeroUsuario.Location = new Point(286, 166);
+            tbx_NumeroUsuario.Name = "tbx_NumeroUsuario";
+            tbx_NumeroUsuario.Size = new Size(132, 25);
+            tbx_NumeroUsuario.TabIndex = 11;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(306, 143);
+            label6.Location = new Point(269, 143);
             label6.Name = "label6";
-            label6.Size = new Size(58, 20);
+            label6.Size = new Size(168, 20);
             label6.TabIndex = 10;
-            label6.Text = "SENHA";
+            label6.Text = "NÚMERO DO USUÁRIO";
             // 
-            // comboBox1
+            // cdx_TipoUsuario
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(110, 166);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 25);
-            comboBox1.TabIndex = 9;
+            cdx_TipoUsuario.FormattingEnabled = true;
+            cdx_TipoUsuario.Location = new Point(110, 166);
+            cdx_TipoUsuario.Name = "cdx_TipoUsuario";
+            cdx_TipoUsuario.Size = new Size(121, 25);
+            cdx_TipoUsuario.TabIndex = 9;
             // 
             // label4
             // 
@@ -109,12 +109,12 @@
             label5.TabIndex = 4;
             label5.Text = "EMAIL:";
             // 
-            // tbx_CodigoCliente
+            // tbx_EmailUsuario
             // 
-            tbx_CodigoCliente.Location = new Point(174, 86);
-            tbx_CodigoCliente.Name = "tbx_CodigoCliente";
-            tbx_CodigoCliente.Size = new Size(202, 25);
-            tbx_CodigoCliente.TabIndex = 7;
+            tbx_EmailUsuario.Location = new Point(174, 86);
+            tbx_EmailUsuario.Name = "tbx_EmailUsuario";
+            tbx_EmailUsuario.Size = new Size(202, 25);
+            tbx_EmailUsuario.TabIndex = 7;
             // 
             // label3
             // 
@@ -126,39 +126,41 @@
             label3.TabIndex = 2;
             label3.Text = "TIPO";
             // 
-            // tbx_CodigoFuncionario
+            // tbx_NomeUsuario
             // 
-            tbx_CodigoFuncionario.Location = new Point(174, 36);
-            tbx_CodigoFuncionario.Name = "tbx_CodigoFuncionario";
-            tbx_CodigoFuncionario.Size = new Size(202, 25);
-            tbx_CodigoFuncionario.TabIndex = 8;
+            tbx_NomeUsuario.Location = new Point(174, 36);
+            tbx_NomeUsuario.Name = "tbx_NomeUsuario";
+            tbx_NomeUsuario.Size = new Size(202, 25);
+            tbx_NomeUsuario.TabIndex = 8;
             // 
-            // btn_CadastrarUsuario
+            // btn_ExcluirUsuario
             // 
-            btn_CadastrarUsuario.BackColor = SystemColors.MenuBar;
-            btn_CadastrarUsuario.Location = new Point(224, 217);
-            btn_CadastrarUsuario.Name = "btn_CadastrarUsuario";
-            btn_CadastrarUsuario.Size = new Size(91, 34);
-            btn_CadastrarUsuario.TabIndex = 5;
-            btn_CadastrarUsuario.Text = "CADASTRAR";
-            btn_CadastrarUsuario.UseVisualStyleBackColor = false;
+            btn_ExcluirUsuario.BackColor = SystemColors.MenuBar;
+            btn_ExcluirUsuario.Location = new Point(224, 217);
+            btn_ExcluirUsuario.Name = "btn_ExcluirUsuario";
+            btn_ExcluirUsuario.Size = new Size(91, 34);
+            btn_ExcluirUsuario.TabIndex = 5;
+            btn_ExcluirUsuario.Text = "Excluir";
+            btn_ExcluirUsuario.UseVisualStyleBackColor = false;
+            btn_ExcluirUsuario.Click += btn_ExcluirUsuario_Click;
             // 
-            // button1
+            // btn_BuscarUsuario
             // 
-            button1.BackColor = SystemColors.MenuBar;
-            button1.Location = new Point(427, 112);
-            button1.Name = "button1";
-            button1.Size = new Size(96, 32);
-            button1.TabIndex = 15;
-            button1.Text = "BUSCAR";
-            button1.UseVisualStyleBackColor = false;
+            btn_BuscarUsuario.BackColor = SystemColors.MenuBar;
+            btn_BuscarUsuario.Location = new Point(427, 112);
+            btn_BuscarUsuario.Name = "btn_BuscarUsuario";
+            btn_BuscarUsuario.Size = new Size(96, 32);
+            btn_BuscarUsuario.TabIndex = 15;
+            btn_BuscarUsuario.Text = "BUSCAR";
+            btn_BuscarUsuario.UseVisualStyleBackColor = false;
+            btn_BuscarUsuario.Click += btn_BuscarUsuario_Click;
             // 
-            // tbx_TipoUsuario
+            // tbx_MatriculaUsuario
             // 
-            tbx_TipoUsuario.Location = new Point(46, 121);
-            tbx_TipoUsuario.Name = "tbx_TipoUsuario";
-            tbx_TipoUsuario.Size = new Size(255, 23);
-            tbx_TipoUsuario.TabIndex = 14;
+            tbx_MatriculaUsuario.Location = new Point(46, 121);
+            tbx_MatriculaUsuario.Name = "tbx_MatriculaUsuario";
+            tbx_MatriculaUsuario.Size = new Size(255, 23);
+            tbx_MatriculaUsuario.TabIndex = 14;
             // 
             // label2
             // 
@@ -186,9 +188,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(586, 454);
-            Controls.Add(button1);
+            Controls.Add(btn_BuscarUsuario);
             Controls.Add(groupBox1);
-            Controls.Add(tbx_TipoUsuario);
+            Controls.Add(tbx_MatriculaUsuario);
             Controls.Add(label1);
             Controls.Add(label2);
             Name = "DeletarUsuario";
@@ -202,17 +204,17 @@
         #endregion
 
         private GroupBox groupBox1;
-        private TextBox textBox1;
+        private TextBox tbx_NumeroUsuario;
         private Label label6;
-        private ComboBox comboBox1;
+        private ComboBox cdx_TipoUsuario;
         private Label label4;
         private Label label5;
-        private TextBox tbx_CodigoCliente;
+        private TextBox tbx_EmailUsuario;
         private Label label3;
-        private TextBox tbx_CodigoFuncionario;
-        private Button btn_CadastrarUsuario;
-        private Button button1;
-        private TextBox tbx_TipoUsuario;
+        private TextBox tbx_NomeUsuario;
+        private Button btn_ExcluirUsuario;
+        private Button btn_BuscarUsuario;
+        private TextBox tbx_MatriculaUsuario;
         private Label label2;
         private Label label1;
     }

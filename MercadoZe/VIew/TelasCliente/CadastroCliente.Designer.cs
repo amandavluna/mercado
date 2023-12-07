@@ -74,6 +74,7 @@
             tbx_NomeCliente.Name = "tbx_NomeCliente";
             tbx_NomeCliente.Size = new Size(301, 23);
             tbx_NomeCliente.TabIndex = 4;
+            tbx_NomeCliente.TextChanged += tbx_NomeCliente_TextChanged;
             // 
             // tbx_EmailCliente
             // 
@@ -102,6 +103,7 @@
             mtbx_CelularCliente.Size = new Size(124, 23);
             mtbx_CelularCliente.TabIndex = 8;
             mtbx_CelularCliente.TextMaskFormat = MaskFormat.IncludePrompt;
+            mtbx_CelularCliente.MaskInputRejected += mtbx_CelularCliente_MaskInputRejected;
             // 
             // label5
             // 

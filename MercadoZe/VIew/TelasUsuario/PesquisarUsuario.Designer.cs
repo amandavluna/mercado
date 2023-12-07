@@ -31,40 +31,38 @@
             label1 = new Label();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
-            tbx_TipoUsuario = new TextBox();
-            label2 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
-            label3 = new Label();
             groupBox1 = new GroupBox();
-            comboBox1 = new ComboBox();
+            tbx_Email = new TextBox();
+            dateTimePicker1 = new DateTimePicker();
+            label6 = new Label();
+            cbx_TipoPesquisa = new ComboBox();
             label4 = new Label();
             label5 = new Label();
-            tbx_CodigoCliente = new TextBox();
             label7 = new Label();
-            tbx_CodigoFuncionario = new TextBox();
-            btn_CadastrarUsuario = new Button();
-            label6 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dataGridView1 = new DataGridView();
-            ma = new DataGridViewTextBoxColumn();
-            email = new DataGridViewTextBoxColumn();
-            nom = new DataGridViewTextBoxColumn();
-            tip = new DataGridViewTextBoxColumn();
+            tbx_NomePessquisar = new TextBox();
+            btn_BuscarPesquisar = new Button();
+            tbx_MatriculaPesquisa = new TextBox();
+            label3 = new Label();
+            tabPage2 = new TabPage();
+            cbx_TipoUsuario = new ComboBox();
+            dataGridViewUsuarios = new DataGridView();
+            Codigo = new DataGridViewTextBoxColumn();
+            Matricula = new DataGridViewTextBoxColumn();
+            Função = new DataGridViewTextBoxColumn();
+            button1 = new Button();
+            label2 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            tabPage2.SuspendLayout();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(158, 100);
+            label1.Location = new Point(166, 55);
             label1.Name = "label1";
             label1.Size = new Size(296, 37);
             label1.TabIndex = 0;
@@ -74,107 +72,36 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(12, 175);
+            tabControl1.Location = new Point(12, 157);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(619, 358);
+            tabControl1.Size = new Size(619, 376);
             tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
             tabPage1.Controls.Add(groupBox1);
-            tabPage1.Controls.Add(button2);
-            tabPage1.Controls.Add(textBox1);
+            tabPage1.Controls.Add(btn_BuscarPesquisar);
+            tabPage1.Controls.Add(tbx_MatriculaPesquisa);
             tabPage1.Controls.Add(label3);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(611, 330);
+            tabPage1.Size = new Size(611, 348);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Buscar por Código";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            tabPage2.Controls.Add(dataGridView1);
-            tabPage2.Controls.Add(button1);
-            tabPage2.Controls.Add(tbx_TipoUsuario);
-            tabPage2.Controls.Add(label2);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(611, 330);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Buscar por Usuário";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tbx_TipoUsuario
-            // 
-            tbx_TipoUsuario.Location = new Point(228, 21);
-            tbx_TipoUsuario.Name = "tbx_TipoUsuario";
-            tbx_TipoUsuario.Size = new Size(210, 23);
-            tbx_TipoUsuario.TabIndex = 16;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(12, 21);
-            label2.Name = "label2";
-            label2.Size = new Size(210, 20);
-            label2.TabIndex = 15;
-            label2.Text = "Digite a Matricula do Usuário";
-            label2.Click += label2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.MenuBar;
-            button1.Location = new Point(490, 21);
-            button1.Name = "button1";
-            button1.Size = new Size(84, 23);
-            button1.TabIndex = 17;
-            button1.Text = "BUSCAR";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = SystemColors.MenuBar;
-            button2.Location = new Point(486, 17);
-            button2.Name = "button2";
-            button2.Size = new Size(84, 23);
-            button2.TabIndex = 20;
-            button2.Text = "BUSCAR";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(256, 17);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(199, 23);
-            textBox1.TabIndex = 19;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(47, 19);
-            label3.Name = "label3";
-            label3.Size = new Size(197, 19);
-            label3.TabIndex = 18;
-            label3.Text = "Digite a Matricula do Usuário:";
-            label3.Click += label3_Click;
-            // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(tbx_Email);
             groupBox1.Controls.Add(dateTimePicker1);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(cbx_TipoPesquisa);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(tbx_CodigoCliente);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(tbx_CodigoFuncionario);
-            groupBox1.Controls.Add(btn_CadastrarUsuario);
+            groupBox1.Controls.Add(tbx_NomePessquisar);
             groupBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.Location = new Point(26, 50);
             groupBox1.Name = "groupBox1";
@@ -183,13 +110,37 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "INFORMAÇÕES";
             // 
-            // comboBox1
+            // tbx_Email
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(374, 79);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 25);
-            comboBox1.TabIndex = 9;
+            tbx_Email.Location = new Point(85, 98);
+            tbx_Email.Name = "tbx_Email";
+            tbx_Email.Size = new Size(202, 25);
+            tbx_Email.TabIndex = 12;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(146, 168);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(295, 25);
+            dateTimePicker1.TabIndex = 11;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(35, 172);
+            label6.Name = "label6";
+            label6.Size = new Size(105, 20);
+            label6.TabIndex = 10;
+            label6.Text = "Último Acesso";
+            // 
+            // cbx_TipoPesquisa
+            // 
+            cbx_TipoPesquisa.FormattingEnabled = true;
+            cbx_TipoPesquisa.Location = new Point(374, 79);
+            cbx_TipoPesquisa.Name = "cbx_TipoPesquisa";
+            cbx_TipoPesquisa.Size = new Size(121, 25);
+            cbx_TipoPesquisa.TabIndex = 9;
             // 
             // label4
             // 
@@ -211,13 +162,6 @@
             label5.TabIndex = 4;
             label5.Text = "EMAIL:";
             // 
-            // tbx_CodigoCliente
-            // 
-            tbx_CodigoCliente.Location = new Point(85, 100);
-            tbx_CodigoCliente.Name = "tbx_CodigoCliente";
-            tbx_CodigoCliente.Size = new Size(202, 25);
-            tbx_CodigoCliente.TabIndex = 7;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -228,71 +172,113 @@
             label7.TabIndex = 2;
             label7.Text = "TIPO";
             // 
-            // tbx_CodigoFuncionario
+            // tbx_NomePessquisar
             // 
-            tbx_CodigoFuncionario.Location = new Point(85, 50);
-            tbx_CodigoFuncionario.Name = "tbx_CodigoFuncionario";
-            tbx_CodigoFuncionario.Size = new Size(202, 25);
-            tbx_CodigoFuncionario.TabIndex = 8;
+            tbx_NomePessquisar.Location = new Point(85, 50);
+            tbx_NomePessquisar.Name = "tbx_NomePessquisar";
+            tbx_NomePessquisar.Size = new Size(202, 25);
+            tbx_NomePessquisar.TabIndex = 8;
             // 
-            // btn_CadastrarUsuario
+            // btn_BuscarPesquisar
             // 
-            btn_CadastrarUsuario.BackColor = SystemColors.MenuBar;
-            btn_CadastrarUsuario.Location = new Point(230, 234);
-            btn_CadastrarUsuario.Name = "btn_CadastrarUsuario";
-            btn_CadastrarUsuario.Size = new Size(91, 34);
-            btn_CadastrarUsuario.TabIndex = 5;
-            btn_CadastrarUsuario.Text = "CADASTRAR";
-            btn_CadastrarUsuario.UseVisualStyleBackColor = false;
+            btn_BuscarPesquisar.BackColor = SystemColors.MenuBar;
+            btn_BuscarPesquisar.Location = new Point(486, 17);
+            btn_BuscarPesquisar.Name = "btn_BuscarPesquisar";
+            btn_BuscarPesquisar.Size = new Size(84, 23);
+            btn_BuscarPesquisar.TabIndex = 20;
+            btn_BuscarPesquisar.Text = "BUSCAR";
+            btn_BuscarPesquisar.UseVisualStyleBackColor = false;
+            btn_BuscarPesquisar.Click += btn_BuscarPesquisar_Click;
             // 
-            // label6
+            // tbx_MatriculaPesquisa
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(35, 172);
-            label6.Name = "label6";
-            label6.Size = new Size(105, 20);
-            label6.TabIndex = 10;
-            label6.Text = "Último Acesso";
+            tbx_MatriculaPesquisa.Location = new Point(256, 17);
+            tbx_MatriculaPesquisa.Name = "tbx_MatriculaPesquisa";
+            tbx_MatriculaPesquisa.Size = new Size(199, 23);
+            tbx_MatriculaPesquisa.TabIndex = 19;
             // 
-            // dateTimePicker1
+            // label3
             // 
-            dateTimePicker1.Location = new Point(146, 168);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(295, 25);
-            dateTimePicker1.TabIndex = 11;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(47, 19);
+            label3.Name = "label3";
+            label3.Size = new Size(197, 19);
+            label3.TabIndex = 18;
+            label3.Text = "Digite a Matricula do Usuário:";
+            label3.Click += label3_Click;
             // 
-            // dataGridView1
+            // tabPage2
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ma, email, nom, tip });
-            dataGridView1.Location = new Point(25, 149);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(558, 175);
-            dataGridView1.TabIndex = 18;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            tabPage2.Controls.Add(cbx_TipoUsuario);
+            tabPage2.Controls.Add(dataGridViewUsuarios);
+            tabPage2.Controls.Add(button1);
+            tabPage2.Controls.Add(label2);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(611, 348);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Buscar por Usuário";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
-            // ma
+            // cbx_TipoUsuario
             // 
-            ma.HeaderText = "Matricula";
-            ma.Name = "ma";
+            cbx_TipoUsuario.FormattingEnabled = true;
+            cbx_TipoUsuario.Items.AddRange(new object[] { "Gerente", "Atendente", "Caixa" });
+            cbx_TipoUsuario.Location = new Point(242, 22);
+            cbx_TipoUsuario.Name = "cbx_TipoUsuario";
+            cbx_TipoUsuario.Size = new Size(121, 23);
+            cbx_TipoUsuario.TabIndex = 19;
             // 
-            // email
+            // dataGridViewUsuarios
             // 
-            email.HeaderText = "E-mail";
-            email.Name = "email";
+            dataGridViewUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewUsuarios.Columns.AddRange(new DataGridViewColumn[] { Codigo, Matricula, Função });
+            dataGridViewUsuarios.Location = new Point(25, 149);
+            dataGridViewUsuarios.Name = "dataGridViewUsuarios";
+            dataGridViewUsuarios.RowHeadersVisible = false;
+            dataGridViewUsuarios.RowTemplate.Height = 25;
+            dataGridViewUsuarios.Size = new Size(558, 175);
+            dataGridViewUsuarios.TabIndex = 18;
+            dataGridViewUsuarios.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // nom
+            // Codigo
             // 
-            nom.HeaderText = "Nome";
-            nom.Name = "nom";
+            Codigo.HeaderText = "Codigo";
+            Codigo.Name = "Codigo";
             // 
-            // tip
+            // Matricula
             // 
-            tip.HeaderText = "Tipo";
-            tip.Name = "tip";
+            Matricula.HeaderText = "Matricula";
+            Matricula.Name = "Matricula";
+            // 
+            // Função
+            // 
+            Função.HeaderText = "Função";
+            Função.Name = "Função";
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.MenuBar;
+            button1.Location = new Point(490, 21);
+            button1.Name = "button1";
+            button1.Size = new Size(84, 23);
+            button1.TabIndex = 17;
+            button1.Text = "BUSCAR";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(12, 21);
+            label2.Name = "label2";
+            label2.Size = new Size(210, 20);
+            label2.TabIndex = 15;
+            label2.Text = "Digite a Matricula do Usuário";
+            label2.Click += label2_Click;
             // 
             // PesquisarUsuario
             // 
@@ -310,11 +296,11 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
-            tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -325,26 +311,24 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private TextBox tbx_TipoUsuario;
         private Label label2;
         private Button button1;
-        private Button button2;
-        private TextBox textBox1;
+        private Button btn_BuscarPesquisar;
+        private TextBox tbx_MatriculaPesquisa;
         private Label label3;
         private GroupBox groupBox1;
         private Label label6;
-        private ComboBox comboBox1;
+        private ComboBox cbx_TipoPesquisa;
         private Label label4;
         private Label label5;
-        private TextBox tbx_CodigoCliente;
         private Label label7;
-        private TextBox tbx_CodigoFuncionario;
-        private Button btn_CadastrarUsuario;
+        private TextBox tbx_NomePessquisar;
         private DateTimePicker dateTimePicker1;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn ma;
-        private DataGridViewTextBoxColumn email;
-        private DataGridViewTextBoxColumn nom;
-        private DataGridViewTextBoxColumn tip;
+        private DataGridView dataGridViewUsuarios;
+        private TextBox tbx_Email;
+        private ComboBox cbx_TipoUsuario;
+        private DataGridViewTextBoxColumn Codigo;
+        private DataGridViewTextBoxColumn Matricula;
+        private DataGridViewTextBoxColumn Função;
     }
 }

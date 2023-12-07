@@ -34,14 +34,14 @@
             label4 = new Label();
             label5 = new Label();
             btn_CadastrarUsuario = new Button();
-            tbx_TipoUsuario = new TextBox();
-            tbx_CodigoCliente = new TextBox();
-            tbx_CodigoFuncionario = new TextBox();
-            btn_BuscarUsuario = new Button();
+            tbx_MatriculaFuncionario = new TextBox();
+            tbx_EmailUsuario = new TextBox();
+            tbx_NomeUsuario = new TextBox();
+            btn_BuscarFuncionario = new Button();
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
+            tbx_SenhaUsuario = new TextBox();
             label6 = new Label();
-            comboBox1 = new ComboBox();
+            cbx_TipoUsuario = new ComboBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -106,47 +106,48 @@
             btn_CadastrarUsuario.UseVisualStyleBackColor = false;
             btn_CadastrarUsuario.Click += btn_CadastrarUsuario_Click;
             // 
-            // tbx_TipoUsuario
+            // tbx_MatriculaFuncionario
             // 
-            tbx_TipoUsuario.Location = new Point(89, 131);
-            tbx_TipoUsuario.Name = "tbx_TipoUsuario";
-            tbx_TipoUsuario.Size = new Size(188, 23);
-            tbx_TipoUsuario.TabIndex = 6;
+            tbx_MatriculaFuncionario.Location = new Point(89, 131);
+            tbx_MatriculaFuncionario.Name = "tbx_MatriculaFuncionario";
+            tbx_MatriculaFuncionario.Size = new Size(188, 23);
+            tbx_MatriculaFuncionario.TabIndex = 6;
             // 
-            // tbx_CodigoCliente
+            // tbx_EmailUsuario
             // 
-            tbx_CodigoCliente.Location = new Point(170, 106);
-            tbx_CodigoCliente.Name = "tbx_CodigoCliente";
-            tbx_CodigoCliente.Size = new Size(202, 25);
-            tbx_CodigoCliente.TabIndex = 7;
+            tbx_EmailUsuario.Location = new Point(170, 106);
+            tbx_EmailUsuario.Name = "tbx_EmailUsuario";
+            tbx_EmailUsuario.Size = new Size(202, 25);
+            tbx_EmailUsuario.TabIndex = 7;
             // 
-            // tbx_CodigoFuncionario
+            // tbx_NomeUsuario
             // 
-            tbx_CodigoFuncionario.Location = new Point(170, 56);
-            tbx_CodigoFuncionario.Name = "tbx_CodigoFuncionario";
-            tbx_CodigoFuncionario.Size = new Size(202, 25);
-            tbx_CodigoFuncionario.TabIndex = 8;
+            tbx_NomeUsuario.Location = new Point(170, 56);
+            tbx_NomeUsuario.Name = "tbx_NomeUsuario";
+            tbx_NomeUsuario.Size = new Size(202, 25);
+            tbx_NomeUsuario.TabIndex = 8;
             // 
-            // btn_BuscarUsuario
+            // btn_BuscarFuncionario
             // 
-            btn_BuscarUsuario.BackColor = SystemColors.MenuBar;
-            btn_BuscarUsuario.Location = new Point(412, 125);
-            btn_BuscarUsuario.Name = "btn_BuscarUsuario";
-            btn_BuscarUsuario.Size = new Size(96, 32);
-            btn_BuscarUsuario.TabIndex = 10;
-            btn_BuscarUsuario.Text = "BUSCAR";
-            btn_BuscarUsuario.UseVisualStyleBackColor = false;
+            btn_BuscarFuncionario.BackColor = SystemColors.MenuBar;
+            btn_BuscarFuncionario.Location = new Point(412, 125);
+            btn_BuscarFuncionario.Name = "btn_BuscarFuncionario";
+            btn_BuscarFuncionario.Size = new Size(96, 32);
+            btn_BuscarFuncionario.TabIndex = 10;
+            btn_BuscarFuncionario.Text = "BUSCAR";
+            btn_BuscarFuncionario.UseVisualStyleBackColor = false;
+            btn_BuscarFuncionario.Click += btn_BuscarUsuario_Click;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(tbx_SenhaUsuario);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(cbx_TipoUsuario);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(tbx_CodigoCliente);
+            groupBox1.Controls.Add(tbx_EmailUsuario);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(tbx_CodigoFuncionario);
+            groupBox1.Controls.Add(tbx_NomeUsuario);
             groupBox1.Controls.Add(btn_CadastrarUsuario);
             groupBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.Location = new Point(41, 179);
@@ -156,12 +157,12 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "INFORMAÇÕES";
             // 
-            // textBox1
+            // tbx_SenhaUsuario
             // 
-            textBox1.Location = new Point(294, 197);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 25);
-            textBox1.TabIndex = 11;
+            tbx_SenhaUsuario.Location = new Point(294, 197);
+            tbx_SenhaUsuario.Name = "tbx_SenhaUsuario";
+            tbx_SenhaUsuario.Size = new Size(100, 25);
+            tbx_SenhaUsuario.TabIndex = 11;
             // 
             // label6
             // 
@@ -173,13 +174,14 @@
             label6.TabIndex = 10;
             label6.Text = "SENHA";
             // 
-            // comboBox1
+            // cbx_TipoUsuario
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(115, 197);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 25);
-            comboBox1.TabIndex = 9;
+            cbx_TipoUsuario.FormattingEnabled = true;
+            cbx_TipoUsuario.Items.AddRange(new object[] { "Gerente", "Caixa", "Atendente" });
+            cbx_TipoUsuario.Location = new Point(115, 197);
+            cbx_TipoUsuario.Name = "cbx_TipoUsuario";
+            cbx_TipoUsuario.Size = new Size(121, 25);
+            cbx_TipoUsuario.TabIndex = 9;
             // 
             // CadastroUsuario
             // 
@@ -188,8 +190,8 @@
             BackColor = Color.White;
             ClientSize = new Size(581, 470);
             Controls.Add(groupBox1);
-            Controls.Add(btn_BuscarUsuario);
-            Controls.Add(tbx_TipoUsuario);
+            Controls.Add(btn_BuscarFuncionario);
+            Controls.Add(tbx_MatriculaFuncionario);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "CadastroUsuario";
@@ -209,13 +211,13 @@
         private Label label4;
         private Label label5;
         private Button btn_CadastrarUsuario;
-        private TextBox tbx_TipoUsuario;
-        private TextBox tbx_CodigoCliente;
-        private TextBox tbx_CodigoFuncionario;
-        private Button btn_BuscarUsuario;
+        private TextBox tbx_MatriculaFuncionario;
+        private TextBox tbx_EmailUsuario;
+        private TextBox tbx_NomeUsuario;
+        private Button btn_BuscarFuncionario;
         private GroupBox groupBox1;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
+        private ComboBox cbx_TipoUsuario;
+        private TextBox tbx_SenhaUsuario;
         private Label label6;
     }
 }

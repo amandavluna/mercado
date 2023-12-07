@@ -8,14 +8,14 @@ namespace MercadoZe.Model
 {
     internal class Produto
     {
-        private int id_Produto;
+        private static int id_Produto;
         private static string NomeProduto;
-        private static string ValorProduto;
+        private static decimal ValorProduto;
         private static string MarcaProduto;
 
-        public int Id_Produto { get => id_Produto; set => id_Produto = value; }
+        public static int Id_Produto { get => id_Produto; set => id_Produto = value; }
         public static string NomeProduto1 { get => NomeProduto; set => NomeProduto = value; }
-        public static string ValorProduto1 { get => ValorProduto; set => ValorProduto = value; }
+        public static decimal ValorProduto1 { get => ValorProduto; set => ValorProduto = value; }
         public static string MarcaProduto1 { get => MarcaProduto; set => MarcaProduto = value; }
     }
 }

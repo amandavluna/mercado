@@ -59,5 +59,15 @@ namespace MercadoZe.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1067203316_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1067203316-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

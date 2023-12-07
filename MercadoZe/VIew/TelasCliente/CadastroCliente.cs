@@ -34,5 +34,15 @@ namespace MercadoZe.VIew.TelasCliente
             manipulaCliente.AdicionarCliente();
 
         }
+
+        private void mtbx_CelularCliente_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void tbx_NomeCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

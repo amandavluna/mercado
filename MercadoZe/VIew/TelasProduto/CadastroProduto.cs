@@ -22,11 +22,11 @@ namespace MercadoZe.VIew.TelasProduto
         private void button1_Click(object sender, EventArgs e)
         {
             Produto.NomeProduto1 = tbx_NomeProduto.Text;
-            Produto.ValorProduto1 = tbx_ValorProduto.Text;
+            decimal vProduto = Produto.ValorProduto1;
             Produto.MarcaProduto1 = tbx_MarcaProduto.Text;
 
             manipulaProduto manipulaProduto = new manipulaProduto();
-            manipulaProduto.AdicionarProduto();
+            manipulaProduto.CadastroProduto();
         }
     }
 }
